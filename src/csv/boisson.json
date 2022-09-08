@@ -1,0 +1,38 @@
+[
+    {
+        "nom": "Banana Juice",
+        "prix": 3,
+        "url": "./img/banana.png",
+        "categorie": "boisson"
+      },
+      {
+        "nom": "Orange Juice",
+        "prix": 3,
+        "url": "./img/orange.png",
+        "categorie": "boisson"
+      },
+      {
+        "nom": "Grape Juice",
+        "prix": 3,
+        "url": "./img/grape.png",
+        "categorie": "boisson"
+      },
+      {
+        "nom": "Watermelon Juice",
+        "prix": 3,
+        "url": "./img/watermelon.png",
+        "categorie": "boisson"
+      },
+      {
+        "nom": "Lemon Juice",
+        "prix": 3,
+        "url": "./img/lemon.png",
+        "categorie": "boisson"
+      },
+      {
+        "nom": "Apple Juice",
+        "prix": 3,
+        "url": "./img/apple.png",
+        "categorie": "boisson"
+      }
+]

@@ -1,0 +1,74 @@
+[
+    {
+      "nom": "Ham & Grab Stick",
+      "prix": 7,
+      "url": "../img/ham.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Hawaiian",
+      "prix": 7,
+      "url": "../img/hawaiian.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Pork Deluxe",
+      "prix": 7,
+      "url": "../img/pork.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Veggie",
+      "prix": 7,
+      "url": "../img/veggie.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Double Pepporoni",
+      "prix": 7,
+      "url": "../img/pepporoni.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Bacon & Sausage",
+      "prix": 7,
+      "url": "../img/bacon.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Tom Yum Goong",
+      "prix": 7,
+      "url": "../img/tyg.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Bacon & BBQ",
+      "prix": 7,
+      "url": "../img/bbq.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Prawn Cocktail",
+      "prix": 7,
+      "url": "./img/prawn.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Magherita",
+      "prix": 7,
+      "url": "./img/magherita.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Chicken & Pineapple",
+      "prix": 7,
+      "url": "./img/chicken.png",
+      "categorie": "pizza"
+    },
+    {
+      "nom": "Super Seafood",
+      "prix": 7,
+      "url": "./img/seafood.png",
+      "categorie": "pizza"
+    }
+]

@@ -1,0 +1,25 @@
+[{
+    "nom": "Macaron",
+    "prix": 5,
+    "url": "./img/macaron.png",
+    "categorie": "dessert"
+  },
+  {
+    "nom": "Sweet Matabak",
+    "prix": 4,
+    "url": "./img/matabak.png",
+    "categorie": "dessert"
+  },
+  {
+    "nom": "Donut",
+    "prix": 3,
+    "url": "./img/donut.png",
+    "categorie": "dessert"
+  },
+  {
+    "nom": "Ice Cream",
+    "prix": 3,
+    "url": "./img/icecream.png",
+    "categorie": "dessert"
+  }
+]

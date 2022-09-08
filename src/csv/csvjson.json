@@ -1,0 +1,134 @@
+[
+  {
+    "nom": "Ham & Grab Stick",
+    "prix": 7,
+    "url": "./img/ham.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Hawaiian",
+    "prix": 7,
+    "url": "./img/hawaiian.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Pork Deluxe",
+    "prix": 7,
+    "url": "./img/pork.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Veggie",
+    "prix": 7,
+    "url": "./img/veggie.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Double Pepporoni",
+    "prix": 7,
+    "url": "./img/pepporoni.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Bacon & Sausage",
+    "prix": 7,
+    "url": "./img/bacon.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Tom Yum Goong",
+    "prix": 7,
+    "url": "./img/tyg.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Bacon & BBQ",
+    "prix": 7,
+    "url": "./img/bbq.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Prawn Cocktail",
+    "prix": 7,
+    "url": "./img/prawn.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Magherita",
+    "prix": 7,
+    "url": "./img/magherita.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Chicken & Pineapple",
+    "prix": 7,
+    "url": "./img/chicken.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Super Seafood",
+    "prix": 7,
+    "url": "./img/seafood.png",
+    "categorie": "pizza"
+  },
+  {
+    "nom": "Banana Juice",
+    "prix": 3,
+    "url": "./img/banana.png",
+    "categorie": "boisson"
+  },
+  {
+    "nom": "Orange Juice",
+    "prix": 3,
+    "url": "./img/orange.png",
+    "categorie": "boisson"
+  },
+  {
+    "nom": "Grape Juice",
+    "prix": 3,
+    "url": "./img/grape.png",
+    "categorie": "boisson"
+  },
+  {
+    "nom": "Watermelon Juice",
+    "prix": 3,
+    "url": "./img/watermelon.png",
+    "categorie": "boisson"
+  },
+  {
+    "nom": "Lemon Juice",
+    "prix": 3,
+    "url": "./img/lemon.png",
+    "categorie": "boisson"
+  },
+  {
+    "nom": "Apple Juice",
+    "prix": 3,
+    "url": "./img/apple.png",
+    "categorie": "boisson"
+  },
+  {
+    "nom": "Macaron",
+    "prix": 5,
+    "url": "./img/macaron.png",
+    "categorie": "dessert"
+  },
+  {
+    "nom": "Sweet Matabak",
+    "prix": 4,
+    "url": "./img/matabak.png",
+    "categorie": "dessert"
+  },
+  {
+    "nom": "Donut",
+    "prix": 3,
+    "url": "./img/donut.png",
+    "categorie": "dessert"
+  },
+  {
+    "nom": "Ice Cream",
+    "prix": 3,
+    "url": "./img/icecream.png",
+    "categorie": "dessert"
+  }
+]

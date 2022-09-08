@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.pos-button {
+  margin-left: 40%;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.btn {
+  margin-left: 7%;
+  width: 200px;
+  height: 150px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(165, 143, 113);
+  background: white;
+  border: 1px solid rgb(165, 143, 113);
+  box-shadow: 1px 1px 0 rgb(165, 143, 113), -1px -1px 0 rgb(165, 143, 113),
+    -1px 1px 0 rgb(165, 143, 113), 1px -1px 0 rgb(165, 143, 113);
+  transition: 500ms ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 20px 5px 0 rgb(165, 143, 113), -20px -5px 0 rgb(165, 143, 113);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.img-home {
+  width: 500px;
+  height: 500px;
+  margin-left: 33%;
+}
+
