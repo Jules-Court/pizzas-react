@@ -1,11 +1,11 @@
 import React,{Component} from "react";
-import "./App.css";
+import "../style/App.css";
 
-import csv from './csv/csvjson.json'
-import csvPizza from './csv/pizza.json'
-import csvBoisson from './csv/boisson.json'
+import csv from '../csv/csvjson.json'
+import csvPizza from '../csv/pizza.json'
+import csvBoisson from '../csv/boisson.json'
 // import csvEntree from './csv/entree.json'
-import csvDessert from './csv/dessert.json'
+import csvDessert from '../csv/dessert.json'
 
 
 

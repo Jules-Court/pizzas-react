@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Livreur.css"
+import "../style/Livreur.css"
 export default class Livreur extends Component {
   render() {
     return (

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./Form.css";
+import "../style/Form.css";
 
-export default class Form extends Component {
+export default class Formul extends Component {
   render() {
     var panier = [];
     panier = JSON.parse(localStorage.getItem("basket"));

@@ -1,9 +1,10 @@
-import App from "./App";
-import AppHome from "./AppHome";
-import Form from "./Form";
+import App from "./component/App";
+import AppHome from "./component/AppHome";
+import Form from "./component/Formul";
+import Livreur from "./component/Livreur"
+
 
 import React from "react";
-import Livreur from "./Livreur"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function Home() {
