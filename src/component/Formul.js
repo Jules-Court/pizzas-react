@@ -17,7 +17,7 @@ export default class Formul extends Component {
     const { fname, lname, address, basket } = this.state;
     console.log(fname, lname, address);
 
-    fetch("http://localhost:8080/form", {
+    fetch("http://localhost:8081/form", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -102,7 +102,7 @@ export default class Formul extends Component {
               </p>
             ))}
           </div>
-          <h3>Total : {panier.totalPrice}</h3>
+          <h3>Total : {panier.totalPrice}€</h3>
         </div>
       </div>
     );

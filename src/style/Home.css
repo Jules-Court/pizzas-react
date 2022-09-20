@@ -3,16 +3,22 @@ h1 {
   color: white;
 }
 
+.home-delivery{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+}
 .pos-button {
-  margin-left: 40%;
-  margin-right: auto;
-  padding: 15px;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  margin-top:10px;
 }
 
 .btn {
   margin-left: 7%;
-  width: 200px;
-  height: 150px;
+  padding: 5px;
   cursor: pointer;
   font-size: 24px;
   font-weight: bold;
@@ -35,6 +41,13 @@ h1 {
 .img-home {
   width: 500px;
   height: 500px;
-  margin-left: 33%;
+}
+
+@media (max-width: 800px) {
+  .img-home {
+    width: 100%;
+  }
+  
+
 }
 
