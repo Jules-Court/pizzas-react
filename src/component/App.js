@@ -13,8 +13,7 @@ class App extends Component {
     this.state = {
       basket: [],
       basketPrice: [],
-      totalPrice: 0,
-      items: [],
+      totalPrice: 0
     };
   }
 
@@ -99,7 +98,7 @@ class App extends Component {
                 <a href="/boisson"> Boissons</a>
               </li>
             </ul>
-            
+
             <div className="barre"></div>
             <div className="basket-product<">
               <h3>Panier</h3>
