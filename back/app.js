@@ -19,10 +19,10 @@ app.use(
 );
 
 app.post("/form", async (req, res) => {
-  const { fname, lname, address, basket } = req.body;
+  const { fname, lname, address, basket, phone } = req.body;
   const newCommand = await pool.query(
-    "INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-    [lname, fname, basket.totalPrice, basket.basket, address]
+    "INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+    [lname, fname, basket.totalPrice, basket.basket, address, phone]
   );
   res.json(newCommand);
   

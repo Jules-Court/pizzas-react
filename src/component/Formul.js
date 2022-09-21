@@ -9,12 +9,13 @@ export default class Formul extends Component {
       lname: "",
       address: "",
       basket: JSON.parse(localStorage.getItem("basket")),
+      phone :""
     };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const { fname, lname, address, basket } = this.state;
+    const { fname, lname, address, basket, phone} = this.state;
     console.log(fname, lname, address);
 
     fetch("http://localhost:8081/form", {
@@ -30,6 +31,7 @@ export default class Formul extends Component {
         lname,
         address,
         basket,
+        phone
       }),
     })
       .then((res) => res.json())
@@ -83,10 +85,21 @@ export default class Formul extends Component {
             onChange={(e) => this.setState({ address: e.target.value })}
             required
           />
+          <label htmlFor="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Your phone.."
+            onChange={(e) => this.setState({ phone: e.target.value })}
+            required
+          />
+
           {!(
             this.state.address.length &&
             this.state.fname &&
-            this.state.lname
+            this.state.lname &&
+            this.state.phone
           ) ? (
             <p></p>
           ) : (
