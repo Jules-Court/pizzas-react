@@ -18,22 +18,18 @@ app.use(
 );
 
 app.post("/form", async (req, res) => {
-  try {
-    const { fname, lname, address, basket, phone } = req.body;
+  const { fname, lname, address, basket, phone } = req.body;
+  // FIXME: LIVREURID N'EST PAS DYNAMIQUE ATTENTION!
+  const query = 'INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone, LivreurID) VALUES ($1, $2, $3, $4, $5, $6, 0) RETURNING *';
+  const values = [lname, fname, basket.totalPrice, basket.basket, address, phone];
 
-    const newCommand = await pool.query(
-      "INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-      lname,
-      fname,
-      basket.totalPrice,
-      basket.basket,
-      address,
-      phone
-    );
-    res.json(newCommand);
-  } catch (err) {
-    console.error(err);
-  }
+  pool.query(query, values)
+    .then(res => {
+      // TODO: Faire sa vie ici.
+      console.log(res.rows[0]);
+    })
+    .catch(e => console.error(e.stack));
+
 });
 
 app.get("/form", async (req, res) => {
