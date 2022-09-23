@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../style/Livreur.css";
-export default class MyDelivery extends Component {
+export default class AllDelivery extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,9 +26,10 @@ export default class MyDelivery extends Component {
                 <div className="map"></div>
 
                 <div className="item">
-                  <br/>
-                  {this.state.data[i].firstname} {this.state.data[i].lastname}
+                  {this.state.data[i].firstname}
                   <br />
+                  {this.state.data[i].lastname}
+
                   <br />
                   {this.state.data[i].phone}
                   <button className="item-button"> Je prends</button>

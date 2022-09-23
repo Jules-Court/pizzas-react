@@ -20,13 +20,13 @@ app.use(
 app.post("/form", async (req, res) => {
   const { fname, lname, address, basket, phone } = req.body;
   // FIXME: LIVREURID N'EST PAS DYNAMIQUE ATTENTION!
-  const query = 'INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone, LivreurID) VALUES ($1, $2, $3, $4, $5, $6, 0) RETURNING *';
+  const query = 'INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone, LivreurID) VALUES ($1, $2, $3, $4, $5, $6, NULL) RETURNING *';
   const values = [lname, fname, basket.totalPrice, basket.basket, address, phone];
 
   pool.query(query, values)
     .then(res => {
       // TODO: Faire sa vie ici.
-      console.log(res.rows[0]);
+      res.json(newCommand);
     })
     .catch(e => console.error(e.stack));
 
@@ -35,6 +35,15 @@ app.post("/form", async (req, res) => {
 app.get("/form", async (req, res) => {
   try {
     const allProduit = await pool.query("SELECT * FROM Commande WHERE LivreurId is NULL");
+    res.json(allProduit.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+app.get("/formsolo", async (req, res) => {
+  try {
+    const allProduit = await pool.query("SELECT * FROM Commande WHERE LivreurId is not NULL");
     res.json(allProduit.rows);
   } catch (err) {
     console.error(err.message);
