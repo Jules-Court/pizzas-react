@@ -127,15 +127,11 @@ class App extends Component {
 
               <div className="total-price">
                 <div className="wrapper">
-                  <button className="commande-button" >
-                    {(this.state.totalPrice > 0) ?
-                      (<a href="/form">Commander {this.state.totalPrice}€</a>)
-                      :
-                      (<a href="/app">Commander {this.state.totalPrice}€</a>)
-
-
-                    }
-                  </button>
+                  <a {... this.state.totalPrice > 0 ? {href: "/form"} : {href: "/app"}}>
+                    <button className="commande-button">
+                      Commander {this.state.totalPrice}€
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
