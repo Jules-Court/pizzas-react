@@ -9,7 +9,6 @@ export default class HeaderLivreur extends Component {
             <input
               type="checkbox"
               id="responsive-menu"
-              onclick="updatemenu()"
             />
             <label></label>
             <ul>

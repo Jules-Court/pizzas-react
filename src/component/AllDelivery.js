@@ -3,25 +3,39 @@ import "../style/Livreur.css";
 export default class MyDelivery extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      firstName: "",
-      lastName: "",
-      Address: "",
-      Contenu: "",
+      data: [],
     };
   }
 
+  componentDidMount(){
+    fetch("http://localhost:8081/form")
+      .then((res) => res.json())
+      .then((resp) => {
+        this.setState({ data: resp });
+      });
+  };
+
   render() {
-    // RECUPERER LES COMMANDES AVEC l'ID QUI EST NULL
     return (
       <div>
         <div className="flex">
-          <div class="flex-container">
-            <div class="item">item 1</div>
-            <div class="item">item 2</div>
-            <div class="item">item 3</div>
-            <div class="item">item 4</div>
+          <div className="flex-container">
+            {this.state.data.map((item, i) => (
+              <div key={i} className="item-map">
+                <div className="map"></div>
+
+                <div className="item">
+                  <br/>
+                  {this.state.data[i].firstname} {this.state.data[i].lastname}
+                  <br />
+                  <br />
+                  {this.state.data[i].phone}
+                  <button className="item-button"> Je prends</button>
+
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

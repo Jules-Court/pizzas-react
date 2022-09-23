@@ -5,7 +5,7 @@ CREATE DATABASE PizzaS;
  
 CREATE TABLE Commande (
     CommandeID SERIAL NOT NULL,
-    LivreurID int,
+    LivreurID int NOT NULL,
     LastName varchar(255) NOT NULL,
     FirstName varchar(255) NOT NULL,
     Prix int NOT NULL,

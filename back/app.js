@@ -6,7 +6,6 @@ const crypto = require("crypto-js");
 var key = "password@111";
 
 const pool = require("./db");
-const { application } = require("express");
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(express.json()); // => req.body
@@ -19,14 +18,37 @@ app.use(
 );
 
 app.post("/form", async (req, res) => {
-  const { fname, lname, address, basket, phone } = req.body;
-  const newCommand = await pool.query(
-    "INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-    [lname, fname, basket.totalPrice, basket.basket, address, phone]
-  );
-  res.json(newCommand);
-  
+  try {
+    const { fname, lname, address, basket, phone } = req.body;
+
+    const newCommand = await pool.query(
+      "INSERT INTO Commande (LastName, FirstName, Prix, Contenu, Addresse, Phone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+      lname,
+      fname,
+      basket.totalPrice,
+      basket.basket,
+      address,
+      phone
+    );
+    res.json(newCommand);
+  } catch (err) {
+    console.error(err);
+  }
 });
+
+app.get("/form", async (req, res) => {
+  try {
+    const allProduit = await pool.query("SELECT * FROM Commande WHERE LivreurId is NULL");
+    res.json(allProduit.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+
+
+
+
 
 
 
@@ -45,7 +67,6 @@ function decrypt(dataCrypted) {
   console.log(decrypted);
   return decrypted;
 }
-
 
 const PORT = process.env.PORT || 8081;
 
