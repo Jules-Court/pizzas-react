@@ -24,9 +24,9 @@ app.post("/form", async (req, res) => {
   const values = [lname, fname, basket.totalPrice, basket.basket, address, phone];
 
   pool.query(query, values)
-    .then(res => {
-      // TODO: Faire sa vie ici.
-      res.json(newCommand);
+    .then(resp => {      
+      res.json(resp.row);
+
     })
     .catch(e => console.error(e.stack));
 
