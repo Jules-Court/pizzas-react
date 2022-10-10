@@ -72,7 +72,6 @@ app.post("/login", async (req, res) => {
       );
 
       if (res.status(201)) {
-        console.log(livreur.rows[0].livreurid)
         return res.json({ status: "ok", data: token });
       } else {
         return res.json({ status: "erreur" });
@@ -83,20 +82,22 @@ app.post("/login", async (req, res) => {
     console.error(err.message);
   }
 });
-
+var tokID;
 app.post("/userData", async (req, res) => {
   const { token } = req.body;
   try {
     const user = jwt.verify(token, JWT_SECRET);
-    console.log(user.email);
+    tokID=user
+
     const livreur = await pool.query(
       "SELECT * FROM Livreur WHERE Email LIKE $1",
       [user.email]
     );
-    console.log(livreur.rows)
     if(livreur.rows[0].email===user.email){
       res.send({status:"ok", data:user})
     }
+    tokID=user.id
+
     
   } catch (error) {}
 });
@@ -113,15 +114,34 @@ app.get("/form", async (req, res) => {
 });
 
 app.get("/formsolo", async (req, res) => {
+
+
+
   try {
     const allProduit = await pool.query(
-      "SELECT * FROM Commande WHERE LivreurId is not NULL"
+      "SELECT * FROM Commande WHERE LivreurId =$1",[tokID]
     );
+    // res.json(livreurId);
     res.json(allProduit.rows);
   } catch (err) {
     console.error(err.message);
   }
 });
+
+
+
+
+
+app.post("/all-delivery",async (req, res) => {
+
+  // select command with id
+  const id = req.body.id
+  const livreurId= req.body.userData.id;
+  IDLivreur=livreurId;
+
+  const updateCmd = await pool.query("UPDATE Commande SET LivreurId = $1 WHERE CommandeID = $2", [livreurId, id])
+});
+
 
 /* CRYPTAGE */
 function cryptage(data) {

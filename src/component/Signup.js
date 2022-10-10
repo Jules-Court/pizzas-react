@@ -16,7 +16,7 @@ export default class SignUp extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { fname, lname, mail, password } = this.state;
-    console.log(fname, lname, mail, password);
+    // console.log(fname, lname, mail, password);
 
     fetch("http://localhost:8081/sign-up", {
       method: "POST",
@@ -39,7 +39,7 @@ export default class SignUp extends Component {
           window.location.href="./login"
 
         }
-        console.log(data);
+        // console.log(data);
       });
   }
 

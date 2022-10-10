@@ -12,7 +12,7 @@ export default class SignIn extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { mail, password } = this.state;
-    console.log(this.state);
+    // console.log(this.state);
 
     fetch("http://localhost:8081/login", {
       method: "POST",
@@ -29,7 +29,7 @@ export default class SignIn extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if(data.status==="ok"){
           alert("login success")
           window.localStorage.setItem("token", data.data)

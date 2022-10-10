@@ -5,7 +5,9 @@ export default class MyDelivery extends Component {
     super(props);
     this.state = {
       data: [],
-      userData: ""
+      userData: "",
+      id: ""
+
     };
   }
 
@@ -31,7 +33,7 @@ export default class MyDelivery extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "UserData");
+        // console.log(data, "UserData");
         this.setState({userData: data.data})
       });
   };
@@ -54,7 +56,7 @@ export default class MyDelivery extends Component {
                   {this.state.data[i].lastname}
 
                   <br />
-                  {this.state.data[i].phone}
+                  {this.state.data[i].livreurid}
                   <button className="item-button"> Livré !</button>
 
                 </div>
