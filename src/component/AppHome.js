@@ -12,7 +12,7 @@ function AppHome() {
           <a href="/pizza" className="btn">
             Client
           </a>
-          <a href="/my-delivery" className="btn">
+          <a href="/connect" className="btn">
             Livreur
           </a>
         </div>

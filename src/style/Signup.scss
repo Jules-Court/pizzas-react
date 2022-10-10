@@ -1,0 +1,66 @@
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+
+  .main {
+    background-color: rgb(193, 165, 128);
+    padding: 5%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+    h1{
+        font-size: 50px;
+    }
+    .navigation-sign{
+      display: flex;
+      justify-content: space-between;
+      a{
+        color: blue;
+        text-decoration: revert;
+      }
+      
+    }
+    input[type=text], select {
+        display: flex;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid tan;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=mail], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid tan;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=password], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid tan;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  }
+}

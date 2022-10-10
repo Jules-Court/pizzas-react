@@ -5,6 +5,7 @@ export default class MyDelivery extends Component {
     super(props);
     this.state = {
       data: [],
+      userData: ""
     };
   }
 
@@ -14,11 +15,33 @@ export default class MyDelivery extends Component {
       .then((resp) => {
         this.setState({ data: resp });
       });
+
+      fetch("http://localhost:8081/userData", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        
+        token: window.localStorage.getItem("token"),
+       }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "UserData");
+        this.setState({userData: data.data})
+      });
   };
 
   render() {
+   
     return (
+
       <div>
+        <p>Mail : {this.state.userData.email}, Id : {this.state.userData.id}</p>
         <div className="flex">
           <div className="flex-container">
             {this.state.data.map((item, i) => (
@@ -39,6 +62,7 @@ export default class MyDelivery extends Component {
             ))}
           </div>
         </div>
+        
       </div>
     );
   }

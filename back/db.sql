@@ -19,10 +19,10 @@ CREATE TABLE Livreur (
     LivreurID SERIAL NOT NULL,
     LastName varchar(255) NOT NULL,
     FirstName varchar(255) NOT NULL,
-    Email varchar(255) NOT NULL,
+    Email varchar(255) NOT NULL UNIQUE,
     Password varchar(255) NOT NULL,
     PRIMARY KEY (LivreurID)
-)
+);
 
 
 
