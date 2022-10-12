@@ -120,6 +120,11 @@ class App extends Component {
                   >
                     <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
                   </svg>
+                  {this.state.basket.length === 0 ? (
+                    <span></span>
+                  ) : (
+                    <span className="bounce-in-top">{this.state.basket.length}</span>
+                  )}
                 </button>
               </li>
             </ul>
@@ -147,7 +152,7 @@ class App extends Component {
                       >
                         X
                       </button>
-                      <hr className="hr-basket"/>
+                      <hr className="hr-basket" />
                     </p>
                   ))
                 ) : (
@@ -189,14 +194,14 @@ class App extends Component {
                       title={data.prix + "€"}
                     ></img>
                   </div>
-                    <button
-                      className="button-add inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
-                      onClick={(event) =>
-                        this.handleClick(event, data.nom, data.prix)
-                      }
-                    >
-                      Ajouter {data.prix}€
-                    </button>
+                  <button
+                    className="button-add inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
+                    onClick={(event) =>
+                      this.handleClick(event, data.nom, data.prix)
+                    }
+                  >
+                    Ajouter {data.prix}€
+                  </button>
                 </div>
               );
             })}

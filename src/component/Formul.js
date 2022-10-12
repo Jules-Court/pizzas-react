@@ -107,14 +107,17 @@ export default class Formul extends Component {
             )}
         </form>
         <div className="basket">
-          <h2>Votre commande</h2>
+          <h2 className="text-lg	">Votre commande</h2>
+          <hr/>
           <div className="product-command">
             {panier.basket.map((item, i) => (
               <p name={panier.basket[i]} key={i}>
                 {panier.basket[i]} {panier.basketPrice[i]}€
+
               </p>
             ))}
           </div>
+          <hr/>
           <h3>Total : {panier.totalPrice}€</h3>
         </div>
       </div>
