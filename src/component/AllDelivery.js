@@ -39,7 +39,7 @@ export default class AllDelivery extends Component {
 
   handleSubmit(e, cmdId) {
     e.preventDefault();
-    const {userData} = this.state;
+    const { userData } = this.state;
     // console.log(cmdId, userData);
     fetch("http://localhost:8081/all-delivery", {
       method: "POST",
@@ -50,27 +50,22 @@ export default class AllDelivery extends Component {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        id:cmdId,
-        userData
+        id: cmdId,
+        userData,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
-
-        this.setState({userData: data.data });
+        this.setState({ userData: data.data });
       });
-
-
-      
   }
 
   render() {
     return (
       <div>
-        <p>
-          Mail : {this.state.userData.email}, Id : {this.state.userData.id}
-        </p>
-
+        <div className="info">
+        <h2>Toutes les livraisons disponibles</h2>
+        </div>
         <div className="flex">
           <div className="flex-container">
             {this.state.data.map((item, i) => (
@@ -84,8 +79,14 @@ export default class AllDelivery extends Component {
 
                   <br />
                   {this.state.data[i].phone}
-                  <form onSubmit={(e) => this.handleSubmit(e,this.state.data[i].commandeid)}>
-                    <input type="submit" value="Je prends!"/>
+                  <form
+                    onSubmit={(e) =>
+                      this.handleSubmit(e, this.state.data[i].commandeid)
+                    }
+                  >
+                    <button type="submit" className="item-button">
+                      Je prends!
+                    </button>
                   </form>
                 </div>
               </div>

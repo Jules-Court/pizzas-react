@@ -25,7 +25,7 @@ function Home() {
       <BrowserRouter>
         <Routes>
             <Route exact path="/" element={<><AppHome /></>}></Route>
-            <Route exact path="/connect" element={<><HeaderLivreur/></>}></Route>
+            <Route exact path="/connect" element={<><HeaderLivreur/><AllDelivery /></>}></Route>
             <Route exact path="/app" element={<><App /></>}></Route>
             <Route exact path="/sign-up" element={<><SignUp /></>}></Route>
             <Route exact path="/login" element={<><Login /></>}></Route>

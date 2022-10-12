@@ -45,7 +45,7 @@ export default class Formul extends Component {
     panier = JSON.parse(localStorage.getItem("basket"));
 
     function redirect() {
-      localStorage.clear();
+      localStorage.removeItem("basket");
       window.location.href = "/";
 
     }

@@ -42,9 +42,12 @@ export default class MyDelivery extends Component {
    
     return (
 
+      
+
       <div>
-        <p>Mail : {this.state.userData.email}, Id : {this.state.userData.id}</p>
-        <div className="flex">
+        <div className="info">
+        <h2>Mes livraisons disponibles</h2>
+        </div>        <div className="flex">
           <div className="flex-container">
             {this.state.data.map((item, i) => (
               <div key={i} className="item-map">
